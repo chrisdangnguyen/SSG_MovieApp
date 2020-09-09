@@ -23,5 +23,14 @@ export const LIST_ID = "7058012" //--> export const LIST_ID = "XXXXXXXX"
 
 * Open and view the movie application in [http://localhost:3000](http://localhost:3000) 
 
+## Technologies
+* React
+* CSS
+* Bootstrap
+* Axios
 
+## Features
+* User can search for movies 
+* User can view their movie list 
+* User can mark and unmark movies from their movie list 
 
