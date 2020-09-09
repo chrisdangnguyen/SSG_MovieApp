@@ -1,38 +1,123 @@
-.App {
+.form-container {
+  margin-left: 10%;
+}
+
+.form-container {
+  width: 80vw;
+}
+
+.form-input {
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.search-query, .auto-container{
+  width: 65vw;
+}
+
+.navbar-bar {
+  justify-content: unset;
+}
+
+.no-image {
+  width: 185px;
+  height: 278px;
+}
+
+.secondary-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-title {
+  position: relative;
+  font-size: 55px;
+  font-weight: 800;
+  color: black;
+  z-index: 2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.secondary-container:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.15;
+  background-image: url("https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg");
+}
+.auto-container {
+  position: absolute;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: lightgray;
+  background-color: white;
+  border-radius: 3px;
+  top: 2.875rem;
+  z-index: 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.option {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 5px;
+  border-top: 1px solid lightgray;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.option,
+span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 22px;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.option:hover {
+  background-color: bisque;
+}
+
+@media (max-width: 1200px) {
+  .search-query, .auto-container {
+    width: 60vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 992px) {
+  .form-container {
+    width: 70vw;
+  }
+  .search-query, .auto-container {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-query, .auto-container {
+    width: 50vw;
+    margin: 5px;
+  }
+
+  .auto-container {
+    top: 3.3rem;
+  }
+
+  span{
+    font-size: 16px;
   }
 }

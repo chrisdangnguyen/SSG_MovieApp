@@ -13,8 +13,11 @@ access token in its corresponding variables.
 A default List ID is provided, but can be replaced with an available LIST ID.
 
 Ex. (key.js file)
+<br/>
 export const API_KEY = "INSERT_API_KEY" --> export const API_KEY = "XXXXXXXX"
+<br/>
 export const ACCESS_TOKEN = "INSER_ACCESS_TOKEN" --> export const ACCESS_TOKEN = "XXXXXXXX"
+<br/>
 export const LIST_ID = "7058012" --> export const LIST_ID = "XXXXXXXX"
 
 ### `npm start`
