@@ -1,4 +1,4 @@
-## Available Scripts
+# SSG_movie_app
 
 In the project directory, you can run:
 
@@ -27,4 +27,4 @@ Open [http://localhost:3000](http://localhost:3000) to view the movie applicatio
 in the browser.
 
 The page will reload if you make edits.
-# SSG_movie_app
+
