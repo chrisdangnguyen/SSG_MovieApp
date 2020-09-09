@@ -1,4 +1,4 @@
-# SSG_movie_app
+# SSG_MovieApp
 
 In the project directory, you can run:
 
@@ -13,12 +13,14 @@ access token in its corresponding variables.
 A default List ID is provided, but can be replaced with an available LIST ID.
 
 Ex. (key.js file)
+
 <br/>
 export const API_KEY = "INSERT_API_KEY" --> export const API_KEY = "XXXXXXXX"
 <br/>
-export const ACCESS_TOKEN = "INSER_ACCESS_TOKEN" --> export const ACCESS_TOKEN = "XXXXXXXX"
+export const ACCESS_TOKEN = "INSERT_ACCESS_TOKEN" --> export const ACCESS_TOKEN = "XXXXXXXX"
 <br/>
 export const LIST_ID = "7058012" --> export const LIST_ID = "XXXXXXXX"
+
 
 ### `npm start`
 
@@ -27,4 +29,5 @@ Open [http://localhost:3000](http://localhost:3000) to view the movie applicatio
 in the browser.
 
 The page will reload if you make edits.
+
 
