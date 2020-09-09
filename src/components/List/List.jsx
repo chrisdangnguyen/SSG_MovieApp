@@ -52,5 +52,4 @@ const List = () => {
   );
 };
 
-
 export default withRouter(List);

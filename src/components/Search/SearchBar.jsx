@@ -7,7 +7,7 @@ const SearchBar = props => {
   const [queryState, setQuery] = useState("");
   const [displayState, setDisplay] = useState(false);
   const [optionsState, setOptions] = useState([]);
-  const wrapperRef = useRef(null)
+  const wrapperRef = useRef(null);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -26,16 +26,16 @@ const SearchBar = props => {
           `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
         )
         .then((res) => {
-          movies = res.data.results.slice(0, 10)
-          setOptions(movies)
+          movies = res.data.results.slice(0, 10);
+          setOptions(movies);
         })
         .catch((error) => console.log(error));
-    }
-  }, [queryState])
+    };
+  }, [queryState]);
 
   const submitSearch = event => {
     event.preventDefault();
-
+    setDisplay(false);
     const query = encodeURI(queryState);
     if (queryState) {
       axios
@@ -56,6 +56,7 @@ const SearchBar = props => {
 
   const setSearchQuery = (title, id) => {
     setDisplay(false);
+    setQuery(title)
     optionsState.forEach(movie => {
       if (movie.id === id) {
         props.history.push({
@@ -63,22 +64,22 @@ const SearchBar = props => {
           state: { movies: [movie], 
           total: 1
           }
-        })
-      }
-    })
-  }
+        });
+      };
+    });
+  };
 
   const changeQuery = (event) => {
     if (displayState === false ) setDisplay(true);
-    setQuery(event.target.value)
-  }
+    setQuery(event.target.value);
+  };
 
   const handleClickOutside = event => {
     const { current: wrap } = wrapperRef;
     if (wrap && !wrap.contains(event.target)) {
-      setDisplay(false)
-    }
-  }
+      setDisplay(false);
+    };
+  };
 
   return (
     <div ref={wrapperRef} className="form-container">

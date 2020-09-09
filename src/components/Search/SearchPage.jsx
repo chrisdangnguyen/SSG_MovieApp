@@ -6,7 +6,6 @@ import { UserSessionContext } from "../../UserSessionContext";
 import axios from "axios";
 import { API_KEY, LIST_ID } from "../../key";
 
-
 const Searches = props => {
   const {listState, setList} = useContext(UserListContext);
   const { sessionState } = useContext(UserSessionContext);
@@ -25,7 +24,7 @@ const Searches = props => {
       
     props.location.state.movies.forEach((movie) => {
       if (movie.id === id) {
-        setList({ list: [...listState.list, movie]})
+        setList({ list: [...listState.list, movie]});
       };
     });
   };
@@ -87,6 +86,5 @@ const Searches = props => {
     </div>
   );
 };
-
 
 export default withRouter(Searches);

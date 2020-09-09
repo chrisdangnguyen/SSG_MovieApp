@@ -17,7 +17,7 @@ const ListItem = props => {
   if (props.image) {
     movieImage = `https://image.tmdb.org/t/p/w185_and_h278_multi_faces/${props.image}`;
   } else {
-    movieImage = noImage
+    movieImage = noImage;
   };
 
   const listIDs = listState.list.map((movie) => movie.id);
@@ -58,6 +58,5 @@ const ListItem = props => {
     </li>
   );
 };
-
 
 export default ListItem;

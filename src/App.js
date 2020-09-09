@@ -6,7 +6,7 @@ import { UserSessionContext } from "./UserSessionContext";
 import axios from "axios";
 import { API_KEY, LIST_ID, ACCESS_TOKEN } from './key';
 
-import "./app.css";
+import "./App.css";
 import HomeContainer from "./components/Home/Home";
 import SearchContainer from "./components/Search/SearchPage";
 import NavBar from "./components/NavBar/NavBar";
@@ -29,7 +29,7 @@ const App = () => {
         setSession({ session_id: res.data.session_id });
       })
       .catch(error => console.log(error))
-  }, [])
+  }, []);
 
   useEffect(() => {
     axios

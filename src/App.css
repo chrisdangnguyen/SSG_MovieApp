@@ -1,8 +1,5 @@
 .form-container {
   margin-left: 10%;
-}
-
-.form-container {
   width: 80vw;
 }
 
@@ -80,8 +77,7 @@
   cursor: pointer;
 }
 
-.option,
-span {
+.option, span {
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 22px;
