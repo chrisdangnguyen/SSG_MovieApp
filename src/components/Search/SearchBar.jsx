@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 import { API_KEY } from "../../key";
 
-
 const SearchBar = props => {
   const [queryState, setQuery] = useState("");
   const [displayState, setDisplay] = useState(false);
@@ -56,7 +55,6 @@ const SearchBar = props => {
   };
 
   const setSearchQuery = (title, id) => {
-    setQuery(title)
     setDisplay(false);
     optionsState.forEach(movie => {
       if (movie.id === id) {
@@ -70,8 +68,13 @@ const SearchBar = props => {
     })
   }
 
+  const changeQuery = (event) => {
+    if (displayState === false ) setDisplay(true);
+    setQuery(event.target.value)
+  }
+
   const handleClickOutside = event => {
-    const {current: wrap} = wrapperRef;
+    const { current: wrap } = wrapperRef;
     if (wrap && !wrap.contains(event.target)) {
       setDisplay(false)
     }
@@ -88,7 +91,7 @@ const SearchBar = props => {
           type="text"
           value={queryState}
           placeholder="Search for movies..."
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={event => changeQuery(event)}
           onClick={() => setDisplay(!displayState)}
         />
         {displayState && (

@@ -21,9 +21,6 @@ const Searches = props => {
         `https://api.themoviedb.org/3/list/${LIST_ID}/add_item?api_key=${API_KEY}&session_id=${sessionState.session_id}`,
         movieToAdd
       )
-      .then((res) => {
-        console.log(res.data);
-      })
       .catch((error) => console.log(error));
       
     props.location.state.movies.forEach((movie) => {
@@ -43,9 +40,6 @@ const Searches = props => {
       `https://api.themoviedb.org/3/list/${LIST_ID}/remove_item?api_key=${API_KEY}&session_id=40e88819a9f122fe1d5df959910ba5829a085459`,
       movieToDelete
       )
-      .then(res => {
-        console.log(res.data);
-      })
       .catch(error => console.log(error));
       
       setList({

@@ -9,7 +9,6 @@ import { API_KEY, LIST_ID } from "../../key";
 const List = () => {
   const {listState, setList} = useContext(UserListContext);
   const { sessionState } = useContext(UserSessionContext);
-  console.log(sessionState)
 
   const deleteMovie = (id) => {
     const movieToDelete = {
@@ -21,9 +20,6 @@ const List = () => {
         `https://api.themoviedb.org/3/list/${LIST_ID}/remove_item?api_key=${API_KEY}&session_id=${sessionState.session_id}`,
         movieToDelete
       )
-      .then(res => {
-        console.log(res.data);
-      })
       .catch(error => console.log(error));
 
     setList({
