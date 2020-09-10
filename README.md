@@ -31,7 +31,9 @@ node_modules folder.
 * Axios
 
 ## Features
-* User can search for movies 
+* User can search for movies by typing an input
+  * Selecting the specific movie from the search dropdown will return just that movie
+  * Enter or click search will retrieve all movies related to the input
 * User can view their movie list 
 * User can mark and unmark movies from their movie list 
 
